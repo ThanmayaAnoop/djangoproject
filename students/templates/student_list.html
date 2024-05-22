@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+</head>
+<body>
+    <h2>Student List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Register No</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.register_no }}</td>
+                <td><img src="{{ student.photo.url }}" alt="{{ student.name }}" width="100"></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
